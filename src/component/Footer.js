@@ -1,6 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
+import action from '../store/action';
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -21,3 +23,5 @@ export default class Footer extends React.Component {
     </div>
   }
 }
+
+export default connect(state => ({ ...state.todo }), action.todo)(Footer);

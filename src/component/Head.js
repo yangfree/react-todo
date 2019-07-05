@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from "react-redux";
+import action from '../store/action';
 
-export default class Head extends React.Component {
+class Head extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -14,3 +16,5 @@ export default class Head extends React.Component {
     </section>
   }
 }
+
+export default connect(state => ({ ...state.todo }), action.todo)(Head);
