@@ -1,0 +1,58 @@
+.panel {
+  width: 500px;
+  margin: 20px auto;
+
+  .panel-heading {
+    .panel-title {
+      margin-bottom: 10px;
+
+      .count {
+        color: #ff0000;
+        font-weight: bold;
+      }
+    }
+
+    .form-control {
+      outline: none;
+    }
+  }
+
+  .panel-body {
+    .list-group {
+      .list-group-item {
+        position: relative;
+
+        input[type=checkbox] {
+          vertical-align: top;
+        }
+
+        span {
+          margin-left: 10px;
+          vertical-align: top;
+
+          &.complete {
+            text-decoration: line-through;
+          }
+        }
+
+        a {
+          display: none;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          right: 10px;
+          top: 50%;
+          margin-top: -10px;
+        }
+
+        &:hover {
+          a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
