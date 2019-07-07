@@ -7,6 +7,13 @@ let todo = {
       type: TYPES.TODO_ADD,
       payload
     }
+  },
+  // 更新筛选对象
+  filter(text) {
+    return {
+      type: TYPES.TODO_FILTER,
+      text,
+    }
   }
 }
 
