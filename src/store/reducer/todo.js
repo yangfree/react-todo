@@ -15,6 +15,17 @@ export default function todo(state = {
     case TYPES.TODO_FILTER:
       state.flag = action.text;
       break;
+    case TYPES.TODO_UPDATE_STATE:
+      let { taskId, newState } = action,
+        item = state.data.find(item => item.id === taskId);
+      if (item) {
+        item.state = newState;
+      }
+      break;
+    case TYPES.TODO_DELETE:
+      let { taskId: taskId_del } = action;
+      state.data = state.data.filter(item => item.id !== taskId_del);
+      break;
     default:
       break;
   }
