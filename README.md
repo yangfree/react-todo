@@ -1,11 +1,15 @@
-# 一个TODO案例
+# React TODO
 
-## 组件
+## Component
 
 - Head
 - Body
 - Footer
 
-## 依赖项
+## Start project
 
-redux
+``` bash
+cd redux-todo
+npm install
+npm start
+```
